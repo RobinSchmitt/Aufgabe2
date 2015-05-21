@@ -1,0 +1,58 @@
+
+import java.util.Scanner;
+
+public class Aufgabe2 {
+	
+	static Scanner s; 
+	
+	public static void main(String args[]) {
+		
+		s = new Scanner(System.in);
+		
+		String Benutzername;
+		
+		System.out.println("Hallo, wie heißt du?");
+		Benutzername = s.next();
+		System.out.println("Hallo " + Benutzername);
+		
+		int t = 1;
+		
+		while (t == 1){	
+			
+			System.out.println("Geben Sie die erste Zahl ein.");
+			double a = s.nextDouble();
+		
+			System.out.println("Geben Sie den Operator ein.");
+			String b = s.next();
+			
+			System.out.println("Geben Sie die zweite Zahl ein.");
+			double c = s.nextDouble();
+			
+			
+			if(b.equals("+")) {
+				double loesung = a + c;
+				System.out.println(loesung);
+			}
+			
+			else if(b.equals("-")) {
+				double loesung = a - c;
+				System.out.println(loesung);
+			}	
+			
+			else if(b.equals("*")) {
+				double loesung = a * c;
+				System.out.println(loesung);
+			}	
+			
+			else if(b.equals("/")) {
+				double loesung = a / c;
+				System.out.println(loesung);
+			}	
+			
+			System.out.println("Zum weiter rechnen 1 drücken");
+			t = s.nextInt();
+			
+			
+		}	
+	}
+}
